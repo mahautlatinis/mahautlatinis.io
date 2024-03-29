@@ -20,7 +20,7 @@ export default function WorkPage() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           On a mission to build products developers{' '}
-          <Link href="/blog/developer-experience-examples">love</Link>, and
+          {/* <Link href="/blog/developer-experience-examples">love</Link>, and */}
           along the way, teach the next generation of developers. Here's a
           summary of my work so far.
         </p>

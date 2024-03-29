@@ -11,9 +11,6 @@ import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import avatar from 'app/avatar.jpg';
 import { PreloadResources } from 'app/preload';
-// import {
-//   getViewsCount,
-// } from 'app/db/queries';
 
 function Badge(props) {
   return (
@@ -72,7 +69,7 @@ function ChannelLink({ img, link, name }) {
               {name}
             </p>
             <Suspense fallback={<p className="h-6" />}>
-              <Subs name={name} />
+              {/* <Subs name={name} /> */}
             </Suspense>
           </div>
         </div>
@@ -84,61 +81,40 @@ function ChannelLink({ img, link, name }) {
   );
 }
 
-async function Subs({ name }: { name: string }) {
-  noStore();
-  let subscribers;
-  if (name === '@leerob') {
-    // subscribers = await getLeeYouTubeSubs();
-  } else {
-    // subscribers = await getVercelYouTubeSubs();
-  }
-
+function BlogLink({ slug, name }) {
   return (
-    <p className="text-neutral-600 dark:text-neutral-400">
-      {subscribers} subscribers
-    </p>
+    <div className="group">
+      <a
+        href={``}
+        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+      >
+        <div className="flex flex-col">
+          <p className="font-medium text-neutral-900 dark:text-neutral-100">
+            {name}
+          </p>
+          <Suspense fallback={<p className="h-6" />}>
+            {/* <Views slug={slug} /> */}
+          </Suspense>
+        </div>
+        <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+          <ArrowIcon />
+        </div>
+      </a>
+    </div>
   );
 }
-
-// function BlogLink({ slug, name }) {
-//   return (
-//     <div className="group">
-//       <a
-//         href={`/blog/${slug}`}
-//         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
-//       >
-//         <div className="flex flex-col">
-//           <p className="font-medium text-neutral-900 dark:text-neutral-100">
-//             {name}
-//           </p>
-//           <Suspense fallback={<p className="h-6" />}>
-//             <Views slug={slug} />
-//           </Suspense>
-//         </div>
-//         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
-//           <ArrowIcon />
-//         </div>
-//       </a>
-//     </div>
-//   );
-// }
-
-// async function Views({ slug }: { slug: string }) {
-//   let views = await getViewsCount();
-//   return <ViewCounter allViews={views} slug={slug} />;
-// }
 
 export default function Page() {
   return (
     <section>
       <PreloadResources />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        hey, I'm leerob 👋
+        hey, I'm Mahaut Latinis 👋
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a frontend developer, optimist, and community builder. I currently `}
+        {`I'm a French software engineer based in Versailles and a bubbly mother. I currently `}
         <Link href="/work">work</Link>
-        {` as the VP of Product at `}
+        {` as Backend Engineer and Product Builder at `}
         <span className="not-prose">
           <Badge href="https://vercel.com/home">
             <svg
@@ -250,11 +226,11 @@ export default function Page() {
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-x-0 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-        <ChannelLink
+        {/* <ChannelLink
           img={avatar}
-          name="@leerob"
-          link="https://www.youtube.com/@leerob"
-        />
+          name="@mahautlatinis"
+          link="https://www.youtube.com/@mahautlatinis"
+        /> */}
         <ChannelLink
           img={vercel}
           name="@vercel"
