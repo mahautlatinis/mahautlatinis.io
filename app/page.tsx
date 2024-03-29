@@ -13,8 +13,8 @@ import avatar from 'app/avatar.jpg';
 import ViewCounter from 'app/blog/view-counter';
 import { PreloadResources } from 'app/preload';
 import {
-  getLeeYouTubeSubs,
-  getVercelYouTubeSubs,
+  // getLeeYouTubeSubs,
+  // getVercelYouTubeSubs,
   getViewsCount,
 } from 'app/db/queries';
 
@@ -91,9 +91,9 @@ async function Subs({ name }: { name: string }) {
   noStore();
   let subscribers;
   if (name === '@leerob') {
-    subscribers = await getLeeYouTubeSubs();
+    // subscribers = await getLeeYouTubeSubs();
   } else {
-    subscribers = await getVercelYouTubeSubs();
+    // subscribers = await getVercelYouTubeSubs();
   }
 
   return (
@@ -341,17 +341,6 @@ export default function Page() {
           >
             <ArrowIcon />
             <p className="ml-2 h-7">follow me</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://leerob.substack.com"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">get email updates</p>
           </a>
         </li>
       </ul>
