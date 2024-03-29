@@ -10,13 +10,7 @@ import filming from 'public/images/home/filming.jpg';
 import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import avatar from 'app/avatar.jpg';
-import ViewCounter from 'app/blog/view-counter';
 import { PreloadResources } from 'app/preload';
-import {
-  getLeeYouTubeSubs,
-  getVercelYouTubeSubs,
-  getViewsCount,
-} from 'app/db/queries';
 
 function Badge(props) {
   return (
@@ -75,7 +69,7 @@ function ChannelLink({ img, link, name }) {
               {name}
             </p>
             <Suspense fallback={<p className="h-6" />}>
-              <Subs name={name} />
+              {/* <Subs name={name} /> */}
             </Suspense>
           </div>
         </div>
@@ -87,27 +81,11 @@ function ChannelLink({ img, link, name }) {
   );
 }
 
-async function Subs({ name }: { name: string }) {
-  noStore();
-  let subscribers;
-  if (name === '@leerob') {
-    subscribers = await getLeeYouTubeSubs();
-  } else {
-    subscribers = await getVercelYouTubeSubs();
-  }
-
-  return (
-    <p className="text-neutral-600 dark:text-neutral-400">
-      {subscribers} subscribers
-    </p>
-  );
-}
-
 function BlogLink({ slug, name }) {
   return (
     <div className="group">
       <a
-        href={`/blog/${slug}`}
+        href={``}
         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
       >
         <div className="flex flex-col">
@@ -115,7 +93,7 @@ function BlogLink({ slug, name }) {
             {name}
           </p>
           <Suspense fallback={<p className="h-6" />}>
-            <Views slug={slug} />
+            {/* <Views slug={slug} /> */}
           </Suspense>
         </div>
         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
@@ -126,22 +104,17 @@ function BlogLink({ slug, name }) {
   );
 }
 
-async function Views({ slug }: { slug: string }) {
-  let views = await getViewsCount();
-  return <ViewCounter allViews={views} slug={slug} />;
-}
-
 export default function Page() {
   return (
     <section>
       <PreloadResources />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
-        hey, I'm leerob 👋
+        hey, I'm Mahaut Latinis 👋
       </h1>
       <p className="prose prose-neutral dark:prose-invert">
-        {`I'm a frontend developer, optimist, and community builder. I currently `}
+        {`I'm a French software engineer based in Versailles and a bubbly mother. I currently `}
         <Link href="/work">work</Link>
-        {` as the VP of Product at `}
+        {` as Backend Engineer and Product Builder at `}
         <span className="not-prose">
           <Badge href="https://vercel.com/home">
             <svg
@@ -248,16 +221,16 @@ export default function Page() {
         <p>
           I create educational content for developers, teaching them about web
           development, JavaScript and TypeScript, React and Next.js, and more.
-          This comes in all forms: blog posts, videos, tweets, conference talks,
+          This comes in all forms: videos, tweets, conference talks,
           and workshops. You can watch some of my favorites below.
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-x-0 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-        <ChannelLink
+        {/* <ChannelLink
           img={avatar}
-          name="@leerob"
-          link="https://www.youtube.com/@leerob"
-        />
+          name="@mahautlatinis"
+          link="https://www.youtube.com/@mahautlatinis"
+        /> */}
         <ChannelLink
           img={vercel}
           name="@vercel"
@@ -273,12 +246,12 @@ export default function Page() {
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-y-4">
-        <BlogLink
+        {/* <BlogLink
           name="What Makes A Great Developer Experience?"
           slug="developer-experience-examples"
         />
         <BlogLink name="What is Developer Relations?" slug="devrel-at-vercel" />
-        <BlogLink name="The Story of Heroku" slug="heroku" />
+        <BlogLink name="The Story of Heroku" slug="heroku" /> */}
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
@@ -326,8 +299,8 @@ export default function Page() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I've worked with and advised companies on{' '}
-          <Link href="/blog/developer-marketing">developer marketing</Link>,{' '}
-          <Link href="/blog/devrel-at-vercel">developer relations</Link>,
+          {/* <Link href="/blog/developer-marketing">developer marketing</Link>,{' '} */}
+          {/* <Link href="/blog/devrel-at-vercel">developer relations</Link>, */}
           building open-source communities, product-led growth, and more.
         </p>
       </div>
@@ -341,17 +314,6 @@ export default function Page() {
           >
             <ArrowIcon />
             <p className="ml-2 h-7">follow me</p>
-          </a>
-        </li>
-        <li>
-          <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://leerob.substack.com"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">get email updates</p>
           </a>
         </li>
       </ul>
