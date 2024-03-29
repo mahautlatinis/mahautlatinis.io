@@ -2,14 +2,6 @@ import { promises as fs } from 'fs';
 import path from 'path';
 import dotenv from 'dotenv';
 
-const template = `---
-title: 'Hello, World!'
-publishedAt: '2023-01-01'
-summary: 'This is your first blog post.'
----
-
-Hello, World!`;
-
 const homePage = `export default function Page() {
   return (
     <section>

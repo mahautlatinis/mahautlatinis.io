@@ -10,13 +10,10 @@ import filming from 'public/images/home/filming.jpg';
 import meetups from 'public/images/home/meetups.jpg';
 import vercel from 'public/images/home/vercel.jpg';
 import avatar from 'app/avatar.jpg';
-import ViewCounter from 'app/blog/view-counter';
 import { PreloadResources } from 'app/preload';
-import {
-  // getLeeYouTubeSubs,
-  // getVercelYouTubeSubs,
-  getViewsCount,
-} from 'app/db/queries';
+// import {
+//   getViewsCount,
+// } from 'app/db/queries';
 
 function Badge(props) {
   return (
@@ -103,33 +100,33 @@ async function Subs({ name }: { name: string }) {
   );
 }
 
-function BlogLink({ slug, name }) {
-  return (
-    <div className="group">
-      <a
-        href={`/blog/${slug}`}
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
-      >
-        <div className="flex flex-col">
-          <p className="font-medium text-neutral-900 dark:text-neutral-100">
-            {name}
-          </p>
-          <Suspense fallback={<p className="h-6" />}>
-            <Views slug={slug} />
-          </Suspense>
-        </div>
-        <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
-          <ArrowIcon />
-        </div>
-      </a>
-    </div>
-  );
-}
+// function BlogLink({ slug, name }) {
+//   return (
+//     <div className="group">
+//       <a
+//         href={`/blog/${slug}`}
+//         className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
+//       >
+//         <div className="flex flex-col">
+//           <p className="font-medium text-neutral-900 dark:text-neutral-100">
+//             {name}
+//           </p>
+//           <Suspense fallback={<p className="h-6" />}>
+//             <Views slug={slug} />
+//           </Suspense>
+//         </div>
+//         <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
+//           <ArrowIcon />
+//         </div>
+//       </a>
+//     </div>
+//   );
+// }
 
-async function Views({ slug }: { slug: string }) {
-  let views = await getViewsCount();
-  return <ViewCounter allViews={views} slug={slug} />;
-}
+// async function Views({ slug }: { slug: string }) {
+//   let views = await getViewsCount();
+//   return <ViewCounter allViews={views} slug={slug} />;
+// }
 
 export default function Page() {
   return (
@@ -248,7 +245,7 @@ export default function Page() {
         <p>
           I create educational content for developers, teaching them about web
           development, JavaScript and TypeScript, React and Next.js, and more.
-          This comes in all forms: blog posts, videos, tweets, conference talks,
+          This comes in all forms: videos, tweets, conference talks,
           and workshops. You can watch some of my favorites below.
         </p>
       </div>
@@ -273,12 +270,12 @@ export default function Page() {
         </p>
       </div>
       <div className="my-8 flex w-full flex-col space-y-4">
-        <BlogLink
+        {/* <BlogLink
           name="What Makes A Great Developer Experience?"
           slug="developer-experience-examples"
         />
         <BlogLink name="What is Developer Relations?" slug="devrel-at-vercel" />
-        <BlogLink name="The Story of Heroku" slug="heroku" />
+        <BlogLink name="The Story of Heroku" slug="heroku" /> */}
       </div>
       <div className="prose prose-neutral dark:prose-invert">
         <p>
@@ -326,8 +323,8 @@ export default function Page() {
       <div className="prose prose-neutral dark:prose-invert">
         <p>
           I've worked with and advised companies on{' '}
-          <Link href="/blog/developer-marketing">developer marketing</Link>,{' '}
-          <Link href="/blog/devrel-at-vercel">developer relations</Link>,
+          {/* <Link href="/blog/developer-marketing">developer marketing</Link>,{' '} */}
+          {/* <Link href="/blog/devrel-at-vercel">developer relations</Link>, */}
           building open-source communities, product-led growth, and more.
         </p>
       </div>

@@ -42,7 +42,7 @@ export default function WorkPage() {
               translated customer pain
             </a>{' '}
             back into the product roadmap. We spoke at{' '}
-            <Link href="/blog/nextjs-conf-2022-recap">conferences</Link>, wrote
+            {/* <Link href="/blog/nextjs-conf-2022-recap">conferences</Link>, wrote */}
             blog posts, and created videos. We built open-source examples and
             contributed back to the product.
           </li>
@@ -78,13 +78,13 @@ export default function WorkPage() {
         <p className="text-neutral-600 dark:text-neutral-400 text-sm">
           Senior Software Engineer, 2018 — 2020
         </p>
-        <p>
+        {/* <p>
           Hy-Vee, an almost 100-year-old grocery chain in the United States,
           wanted to build a new version of their digital storefront. I joined a
           team of <Link href="/blog/product-engineers">product engineers</Link>{' '}
           working across web and mobile to rebuild their legacy .NET application
           (~500k MAU) with React and React Native.
-        </p>
+        </p> */}
         <p>
           On the frontend, I led our move from a custom webpack and React
           configuration to Next.js and the latest React patterns. In the

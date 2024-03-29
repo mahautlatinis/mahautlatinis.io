@@ -46,41 +46,7 @@ body {
   font-family: var(--font-family);
 }
 
-.blog-header,
-.blog-footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: var(--title-color);
-  color: white;
-}
-
-.blog-post {
-  container-type: inline-size;
-  margin: 1rem;
-  padding: 1rem;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-  & .post-title {
-    color: var(--title-color);
-    margin: 0 0 1rem 0;
-    text-wrap: balance;
-    font-size: 1em;
-  }
-
-  & .post-content {
-    color: var(--text-color);
-  }
-}
-
 @container (min-inline-size: 500px) {
-  .blog-post {
-    padding: 1.5rem;
-
-    & .post-title {
-      font-size: 1.25em;
-    }
-  }
 }`;
 
 export const Tailwind = `<!DOCTYPE html>
