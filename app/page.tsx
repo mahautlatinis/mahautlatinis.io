@@ -1,6 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import up42 from "public/images/home/42/42up2.jpg"
+import deloittelogo from "public/images/home/deloitte/deloitte-digital.png"
+import greenlylogo from 'public/images/home/greenly/logo-greenly.png'
 import mahaut from 'public/images/home/mahaut.png';
+import peers from 'public/images/home/greenly/peers.png'
+import shorthair from 'public/images/home/42/updated-42.jpg'
 import { PreloadResources } from 'app/preload';
 
 
@@ -31,45 +36,6 @@ function ArrowIcon() {
   );
 }
 
-function ChannelLink({ img, link, name }) {
-  return (
-    <div className="group flex w-full">
-      <a
-        href={link}
-        target="_blank"
-        className="flex w-full items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800"
-      >
-        <div className="flex items-center space-x-3">
-          <div className="relative h-16">
-            <Image
-              alt={name}
-              src={img}
-              height={64}
-              width={64}
-              sizes="33vw"
-              className="h-16 w-16 rounded-full border border-neutral-200 dark:border-neutral-700"
-              priority
-            />
-            <div className="relative -right-10 -top-6 inline-flex h-6 w-6 items-center rounded-full border border-neutral-200 bg-white p-1 dark:border-neutral-700">
-              <svg width="15" height="11" role="img" aria-label="YouTube logo">
-                <use href="/sprite.svg#youtube" />
-              </svg>
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <p className="font-medium text-neutral-900 dark:text-neutral-100">
-              {name}
-            </p>
-          </div>
-        </div>
-        <div className="transform text-neutral-700 transition-transform duration-300 group-hover:-rotate-12 dark:text-neutral-300">
-          <ArrowIcon />
-        </div>
-      </a>
-    </div>
-  );
-}
-
 export default function Page() {
   return (
     <section>
@@ -80,7 +46,7 @@ export default function Page() {
       <p className="prose prose-neutral dark:prose-invert">
         {`I'm a French software engineer based in Versailles and a bubbly mother. I currently `}
         <Link href="/work">work</Link>
-        {` as Backend Engineer and Product Builder at `}
+        {` as Backend Engineer and Product Builder at Greenly.`}
         <span className="not-prose">
          {/*  <Badge href="https://vercel.com/home">
             <svg
@@ -125,7 +91,7 @@ export default function Page() {
         <div className="relative mb-4 h-40">
           <Image
             alt=""
-            src=""
+            src={greenlylogo}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -135,7 +101,7 @@ export default function Page() {
         <div className="relative mb-4 h-80 sm:mb-0">
           <Image
             alt=""
-            src=""
+            src={peers}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -155,7 +121,7 @@ export default function Page() {
         <div className="relative mb-4 h-40 sm:mb-0">
           <Image
             alt=""
-            src=""
+            src={deloittelogo}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -165,7 +131,7 @@ export default function Page() {
         <div className="relative mb-4 h-40">
           <Image
             alt=""
-            src=""
+            src={up42}
             fill
             sizes="(max-width: 768px) 213px, 33vw"
             priority
@@ -175,7 +141,7 @@ export default function Page() {
         <div className="relative h-80">
           <Image
             alt=""
-            src=""
+            src={shorthair}
             fill
             sizes="(min-width: 768px) 213px, 33vw"
             priority
@@ -205,54 +171,16 @@ export default function Page() {
       {/* TODO: à changer */}
       <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://linear.app">
-            <svg width="78" height="20" role="img" aria-label="Linear logo">
-              <use href="/sprite.svg#linear" />
-            </svg>
-          </a>
         </div>
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://supabase.com">
-            <svg width="100" height="19" role="img" aria-label="Supabase logo">
-              <use href="/sprite.svg#supabase" />
-            </svg>
-          </a>
         </div>
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://www.makeswift.com/blog/makeswift-is-joining-bigcommerce">
-            <svg width="96" height="19" role="img" aria-label="Makeswift logo">
-              <use href="/sprite.svg#makeswift" />
-            </svg>
-          </a>
         </div>
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://resend.com">
-            <svg width="70" height="17" role="img" aria-label="Resend logo">
-              <use href="/sprite.svg#resend" />
-            </svg>
-          </a>
         </div>
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
-          <a href="https://bun.sh">
-            <svg width="35" height="27" role="img" aria-label="Bun logo">
-              <use href="/sprite.svg#bun" />
-            </svg>
-          </a>
         </div>
       </div>
-      <ul className="font-sm mt-8 flex flex-col space-x-0 space-y-2 text-neutral-600 md:flex-row md:space-x-4 md:space-y-0 dark:text-neutral-300">
-        <li>
-          {/* <a
-            className="flex items-center transition-all hover:text-neutral-800 dark:hover:text-neutral-100"
-            rel="noopener noreferrer"
-            target="_blank"
-            href="https://twitter.com/leeerob"
-          >
-            <ArrowIcon />
-            <p className="ml-2 h-7">follow me</p>
-          </a> */}
-        </li>
-      </ul>
     </section>
   );
 }
