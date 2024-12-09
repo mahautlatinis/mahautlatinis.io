@@ -6,7 +6,6 @@ import greenlylogo from 'public/images/home/greenly/logo-greenly.png'
 import mahaut from 'public/images/home/mahaut.png';
 import peers from 'public/images/home/greenly/peers.png'
 import shorthair from 'public/images/home/42/updated-42.jpg'
-import { PreloadResources } from 'app/preload';
 
 
 function Badge(props) {
@@ -19,27 +18,9 @@ function Badge(props) {
   );
 }
 
-function ArrowIcon() {
-  return (
-    <svg
-      width="12"
-      height="12"
-      viewBox="0 0 12 12"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z"
-        fill="currentColor"
-      />
-    </svg>
-  );
-}
-
 export default function Page() {
   return (
     <section>
-      <PreloadResources />
       <h1 className="mb-8 text-2xl font-medium tracking-tighter">
         hey, I'm Mahaut Latinis 👋
       </h1>
@@ -168,6 +149,16 @@ export default function Page() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque quae, pariatur suscipit earum qui omnis alias nemo atque temporibus non, a quaerat? Placeat magnam, soluta nemo dolor est labore?
         </p>
       </div>
+      <div className="relative mb-4 h-80">
+          <Image
+            alt=""
+            src=""
+            fill
+            /* sizes="(max-width: 768px) 213px, 33vw" */
+            priority
+            className="rounded-lg object-cover"
+          />
+        </div>
       {/* TODO: à changer */}
       <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
         <div className="flex items-center justify-between rounded border border-neutral-200 bg-neutral-50 px-3 py-4 dark:border-neutral-700 dark:bg-neutral-800">
