@@ -7,8 +7,6 @@ export default function Page() {
   return (
     <section>
       <HomeImages />
-      <Presentation />
-      <Technos />
     </section>
   );
 }
