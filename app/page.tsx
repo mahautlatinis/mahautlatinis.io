@@ -6,7 +6,8 @@ import greenlylogo from 'public/images/home/greenly/logo-greenly.png'
 import mahaut from 'public/images/home/mahaut.png';
 import peers from 'public/images/home/greenly/peers.png'
 import shorthair from 'public/images/home/42/updated-42.jpg'
-
+import cub3d from 'public/images/home/42/cub3d/cub3d.gif'
+import minishell from 'public/images/home/42/minishell/minishell.gif'
 
 function Badge(props) {
   return (
@@ -149,15 +150,32 @@ export default function Page() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloremque quae, pariatur suscipit earum qui omnis alias nemo atque temporibus non, a quaerat? Placeat magnam, soluta nemo dolor est labore?
         </p>
       </div>
-      <div className="relative mb-4 h-80">
+      {/* <div className="relative mb-4 h-80">
           <Image
             alt=""
             src=""
             fill
-            /* sizes="(max-width: 768px) 213px, 33vw" */
+            sizes="(max-width: 768px) 213px, 33vw"
             priority
             className="rounded-lg object-cover"
           />
+        </div> */}
+        <div className="grid grid-cols-3">
+          <div /*className="space-y-1"*/>
+            <Image src={cub3d} alt="Photo 1" className="w-full h-80 object-cover" />
+            <Image src={minishell} alt="Photo 2" className="w-full h-80 object-cover" />
+            <img src="photo3.jpg" alt="Photo 3" className="w-full h-80 object-cover" />
+          </div>
+          <div /*className="space-y-4"*/>
+            <img src="photo4.jpg" alt="Photo 4" className="w-full h-80 object-cover" />
+            <img src="photo5.jpg" alt="Photo 5" className="w-full h-80 object-cover" />
+            <img src="photo6.jpg" alt="Photo 6" className="w-full h-80 object-cover" />
+          </div>
+          <div /*className="space-y-4"*/>
+            <img src="photo7.jpg" alt="Photo 7" className="w-full h-80 object-cover" />
+            <img src="photo8.jpg" alt="Photo 8" className="w-full h-80 object-cover" />
+            <img src="photo9.jpg" alt="Photo 9" className="w-full h-80 object-cover" />
+          </div>
         </div>
       {/* TODO: à changer */}
       <div className="my-8 flex h-14 w-full flex-row space-x-2 overflow-x-auto">
