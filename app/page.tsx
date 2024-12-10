@@ -8,6 +8,11 @@ import peers from 'public/images/home/greenly/peers.png'
 import shorthair from 'public/images/home/42/updated-42.jpg'
 import cub3d from 'public/images/home/42/cub3d/cub3d.gif'
 import minishell from 'public/images/home/42/minishell/minishell.gif'
+import inception from 'public/images/home/42/inception/inception1.png'
+import inception1 from 'public/images/home/42/inception/inception1.png'
+import minitalk from 'public/images/home/42/minitalk/minitalk.png'
+import solong from 'public/images/home/42/so_long/solonggif.gif'
+
 
 function Badge(props) {
   return (
@@ -160,21 +165,21 @@ export default function Page() {
             className="rounded-lg object-cover"
           />
         </div> */}
-        <div className="grid grid-cols-3">
-          <div /*className="space-y-1"*/>
-            <Image src={cub3d} alt="Photo 1" className="w-full h-80 object-cover" />
-            <Image src={minishell} alt="Photo 2" className="w-full h-80 object-cover" />
-            <img src="photo3.jpg" alt="Photo 3" className="w-full h-80 object-cover" />
+        <div className="grid grid-cols-3 gap-1">
+          <div className="space-y-1">
+            <Image src={cub3d} alt="Cub3d" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg" />
+            <Image src={minitalk} alt="Photo 2" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
+            <Image src="" alt="Photo 3" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
           </div>
-          <div /*className="space-y-4"*/>
-            <img src="photo4.jpg" alt="Photo 4" className="w-full h-80 object-cover" />
-            <img src="photo5.jpg" alt="Photo 5" className="w-full h-80 object-cover" />
-            <img src="photo6.jpg" alt="Photo 6" className="w-full h-80 object-cover" />
+          <div className="space-y-1">
+            <Image src="" alt="Photo 2" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
+            <Image src={minishell} alt="Minishell" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
+            <Image src="" alt="Photo 3" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
           </div>
-          <div /*className="space-y-4"*/>
-            <img src="photo7.jpg" alt="Photo 7" className="w-full h-80 object-cover" />
-            <img src="photo8.jpg" alt="Photo 8" className="w-full h-80 object-cover" />
-            <img src="photo9.jpg" alt="Photo 9" className="w-full h-80 object-cover" />
+          <div className="space-y-1">
+            <Image src={inception1} alt="Inception" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg" />
+            <Image src={solong} alt="Photo 2" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
+            <Image src="" alt="Photo 3" objectFit="cover" className="transition-transform duration-300 ease-out hover:scale-90 rounded-lg"  />
           </div>
         </div>
       {/* TODO: à changer */}
