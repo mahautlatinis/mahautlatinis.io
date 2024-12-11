@@ -6,7 +6,28 @@ const navItems = {
   },
   '/work': {
     name: 'work',
-  }
+  },
+  /* '/contact': {
+    name: 'contact',
+  },
+  '/education': {
+    name: 'education',
+  },
+  '/hobbies': {
+    name: 'hobbies',
+  },
+   '/personal': {
+    name: 'personal',
+  },
+  '/services': {
+    name: 'services',
+  },
+  '/projects': {
+    name: 'projects',
+  },
+  '/testimonial': {
+    name: 'testimonial',
+  } */
 };
 
 export function Navbar() {
