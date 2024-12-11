@@ -1,12 +1,10 @@
 
-import HomeImages from './HomeImages';
-import Presentation from './Presentation';
-import Technos from './Technos';
+import Presentation from './components/Presentation';
 
 export default function Page() {
   return (
     <section>
-      <HomeImages />
+      <Presentation />
     </section>
   );
 }
